@@ -1,0 +1,235 @@
+/* App */
+.App {
+  text-align: center;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Navigation */
+nav {
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 10px;
+  font-size: 25px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Create Post Page */
+.createPostPage {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.cpContainer {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: black;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.cpContainer h1 {
+  text-align: center;
+}
+
+.cpContainer label {
+  font-size: 20px;
+}
+
+.cpContainer .inputGp {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGp input,
+.inputGp textarea {
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.inputGp textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.cpContainer button {
+  margin-top: 20px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  background-color: #ffffff;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+.cpContainer button:hover {
+  background-color: #dddddd;
+}
+
+/* Login Page */
+.loginPage {
+  width: 100vw;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginPage p {
+  font-size: 30px;
+}
+
+/* Google Button */
+.login-with-google-btn {
+  cursor: pointer;
+  padding: 5px 16px 12px 42px;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  font-size: 20px;
+  background-color: white;
+  color: #555;
+  background-repeat: no-repeat;
+  background-position: 12px 11px;
+}
+
+.login-with-google-btn:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+/* Home Page Layout */
+.homePage {
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Change to center for vertical center */
+  background-color: #1e1e1e;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.postsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto; /* This ensures it's horizontally centered */
+}
+
+/* Individual Post Styling */
+.post {
+  width: 100%;
+  background-color: #ffffff;
+  color: black;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  word-wrap: break-word;
+  transition: transform 0.2s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+}
+
+.post .postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.postHeader .title {
+  font-weight: bold;
+}
+
+.postHeader .deletePost {
+  display: flex;
+  align-items: center;
+}
+
+.deletePost button {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: red;
+}
+
+.post .postTextContainer {
+  margin-top: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  a {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  .cpContainer,
+  .post {
+    width: 90%;
+  }
+
+  .cpContainer label {
+    font-size: 18px;
+  }
+
+  .cpContainer button {
+    font-size: 16px;
+    height: 35px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}
